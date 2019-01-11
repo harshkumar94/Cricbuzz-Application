@@ -1,0 +1,69 @@
+<div class="container ">
+  <div class="table">
+<tr><th><table class="table ">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col" colspan="2" >{{tt1}}</th>
+    </tr>
+  </thead>
+  
+  <tbody >
+   <tr>
+    <th> <input type="text" #playername1></th>
+     <th><input type="button" value="Add Players" (click)="onsubmitclick()" ></th> 
+     <th><input type="button" value="delete" (click)="ondeleteclick()" ></th> 
+    <!-- <th><button type="button" class="btn btn" >Submit</button></th> -->
+   </tr> 
+  </tbody>
+  <thead>
+      <tr>
+        <th scope="col">Jersey Number</th>
+        <th scope="col">Team1 Player</th>
+      </tr>
+      <tr *ngFor="let c1 of playernames1">
+        <th>*</th>
+        <th>{{c1}}</th>
+      </tr>
+      <tr><button type="button" (click)="onFinalClick()" class="my-2">FinalTeam1</button></tr>
+    </thead>
+</table> 
+</th>
+
+
+
+
+<th><table class="table ml-4 ">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col" colspan="2">{{tt2}}</th>
+      </tr>
+    </thead>
+    
+    <tbody >
+     <tr>
+       <th> <input type="text" #playername2 ></th>
+      <th><input type="button" value="Add Players" (click)="onsubmitclick1()" ></th>
+     </tr> 
+    </tbody>
+    <thead>
+        <tr>
+          <th scope="col">Jersey Number</th>
+          <th scope="col">Team2 Player</th>
+        </tr>
+        <tr *ngFor="let c2 of playernames2">
+          <th>*</th>
+          <th>{{c2}}</th>
+        </tr>
+        <tr><button type="button" (click)="onFinalClick1()" class="my-2">FinalTeam2</button></tr>
+      </thead>
+  </table></th> </tr>
+</div>
+
+
+
+
+
+<div class="wrapper " >
+<button type="button" class="btn btn-outline-success ml-4" style="" (click)="onstartclick()">Start Match</button>
+</div>
+</div>

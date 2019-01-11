@@ -1,0 +1,59 @@
+<div class="container col-sm-3 border border -dark my-2">
+ <form >
+  <h2 style="text-align: center">Summary</h2>
+   <div class="form-group">
+    <label for="formGroupExampleInput" >Possibility of runs</label>
+      <select class="form-control">
+        <option>Runs</option>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>6</option>
+        <option>Wicket</option>
+      </select>
+   </div>
+   
+    <div class="form-group">
+      <label for="formGroupExampleInput2" >Wicket</label>
+        <select class="form-control">
+          <option>Wicket</option>
+          <option>Caught</option>
+          <option>Bowled</option>
+          <option>Runout</option>
+          <option>Hit Wicket</option>
+          <option>Stumped</option>
+        </select>
+    </div>
+   
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Caught By</label>
+      <select class="form-control">
+        <option>Caught By</option>
+        <option *ngFor="let cc of plnames">{{cc}}</option>
+         <!-- <option>{{plnames[1]}}</option> -->
+        <!-- <option>Runout</option>
+        <option>Hit Wicket</option>
+        <option>Stumped</option>  -->
+      </select>
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Balls</label>
+   
+     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Balls" name="ball" [(ngModel)] = "ball"/>
+    
+     </div>
+  <div class="form-group">
+      <label for="formGroupExampleInput2">Overs</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Overs" name="over" [(ngModel)] = "over">
+  </div>
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Commentry</label>
+    <textarea class="form-control" id="formGroupExampleInput2" placeholder="Description" name="description" [(ngModel)] = "description"></textarea>
+  </div>
+   <button type="button" class="btn btn-success my-2 " (click)="onaddscoreclick()">Add Score</button>
+ </form>
+</div>
